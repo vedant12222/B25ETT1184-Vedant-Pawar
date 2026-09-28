@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void printPascalTriangle(int rows) {
+    for (int i = 0; i < rows; i++) {
+        // Print spaces for alignment
+        for (int space = 0; space < rows - i - 1; space++) {
+            cout << " ";
+        }
+
+        long long value = 1; // First element of every row is always 1
+        
+        for (int j = 0; j <= i; j++) {
+            cout << value << " ";
+            
+            // Formula to calculate the next value in the current row
+            value = value * (i - j) / (j + 1);
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int rows;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+
+    printPascalTriangle(rows);
+
+    return 0;
+}
