@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class String {
+    string str;
+
+public:
+    // Member function to input string
+    void getString() {
+        cout << "Enter a string: ";
+        cin >> str;
+    }
+
+    // Member function to display string
+    void displayString() {
+        cout << "String: " << str << endl;
+    }
+};
+
+int main() {
+    // Creating two objects
+    String s1, s2;
+
+    // Input two strings
+    s1.getString();
+    s2.getString();
+
+    // Display two strings
+    cout << "\nFirst string:" << endl;
+    s1.displayString();
+
+    cout << "Second string:" << endl;
+    s2.displayString();
+
+    return 0;
+}
