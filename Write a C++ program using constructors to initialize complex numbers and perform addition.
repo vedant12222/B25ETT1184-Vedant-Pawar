@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+    float real, imag;
+
+public:
+    // Constructor
+    Complex(float r = 0, float i = 0) {
+        real = r;
+        imag = i;
+    }
+
+    // Function to add two complex numbers
+    Complex add(Complex c) {
+        return Complex(real + c.real, imag + c.imag);
+    }
+
+    // Display the complex number
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+    // Initialize complex numbers using constructor
+    Complex c1(3, 4);
+    Complex c2(5, 6);
+
+    // Add the complex numbers
+    Complex sum = c1.add(c2);
+
+    cout << "First complex number: ";
+    c1.display();
+
+    cout << "Second complex number: ";
+    c2.display();
+
+    cout << "Sum: ";
+    sum.display();
+
+    return 0;
+}
