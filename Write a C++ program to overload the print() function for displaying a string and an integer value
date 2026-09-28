@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class Display {
+public:
+    // Function to print a string
+    void print(string str) {
+        cout << "String: " << str << endl;
+    }
+
+    // Function to print an integer
+    void print(int num) {
+        cout << "Integer: " << num << endl;
+    }
+};
+
+int main() {
+    Display obj;
+
+    obj.print("Hello World");
+    obj.print(100);
+
+    return 0;
+}
