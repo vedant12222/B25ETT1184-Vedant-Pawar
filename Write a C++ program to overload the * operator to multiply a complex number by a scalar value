@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+    float real, imag;
+
+public:
+    Complex(float r = 0, float i = 0) {
+        real = r;
+        imag = i;
+    }
+
+    // Overload * operator
+    Complex operator*(float scalar) {
+        return Complex(real * scalar, imag * scalar);
+    }
+
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+    Complex c1(3, 4);
+
+    float scalar = 2;
+
+    Complex result = c1 * scalar;
+
+    cout << "Complex number: ";
+    c1.display();
+
+    cout << "After multiplication by " << scalar << ": ";
+    result.display();
+
+    return 0;
+}
